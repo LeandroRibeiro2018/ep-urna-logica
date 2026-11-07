@@ -1,0 +1,13 @@
+{
+  "name": "ep-urna-logica",
+  "version": "1.0.0",
+  "description": "Urna Lógica: o enigma da eleição de Verídia (EP de Estruturas de Dados e Análise de Algoritmos, IPT)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test",
+    "bench": "node scripts/bench.js"
+  },
+  "engines": { "node": ">=20" }
+}

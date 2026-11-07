@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Urna Lógica — O Enigma da Eleição de Verídia</title>
+  <meta name="description" content="Jogo de lógica e investigação sobre uma eleição totalmente fictícia: estruturas de dados, ordenação, grafos, BFS/DFS e AVL." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗳️</text></svg>" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <a class="pular" href="#app">Ir para o conteúdo</a>
+  <header class="topo">
+    <a class="marca" href="#/menu">🗳️ <b>Urna Lógica</b> <small>Verídia 2042</small></a>
+    <nav aria-label="Navegação">
+      <a href="#/menu">Menu</a>
+      <a href="#/jogar">Jogar</a>
+      <a href="#/resolver">Resolver</a>
+      <a href="#/instrucoes">Instruções</a>
+      <a href="#/resultados">Resultados</a>
+    </nav>
+    <div id="selos" class="selos" aria-label="Selos conquistados"></div>
+  </header>
+  <main id="app" tabindex="-1"></main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <footer class="rodape">
+    Projeto acadêmico (IPT · Estruturas de Dados e Análise de Algoritmos). Verídia, seus locais, registros, códigos e opções são <b>inteiramente fictícios</b>; nenhuma relação com eleições, partidos ou candidatos reais.
+  </footer>
+  <noscript><p style="padding:1rem">Este jogo precisa de JavaScript habilitado.</p></noscript>
+  <script type="module" src="./src/ui/app.js"></script>
+</body>
+</html>
