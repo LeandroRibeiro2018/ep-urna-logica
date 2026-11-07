@@ -42,4 +42,11 @@ export const REGISTRO_IAG = [
     alteracoes: '[preencher]',
     validacao: 'Execução local do jogo no navegador e partida manual completa; [complementar com teste com pessoa que não programou]',
   },
+  {
+    ferramenta: 'Claude Code (Claude Sonnet 5.5) — 07/11/2026',
+    objetivo: 'Gerar o relatório técnico com métricas calculadas na hora e os documentos de entrega (docs/).',
+    aproveitado: 'scripts/gerar-relatorio.js (todas as tabelas vêm de medições reais) e os arquivos de docs/.',
+    alteracoes: '[preencher]',
+    validacao: 'Números citados no texto conferidos contra as tabelas geradas; três frases foram reescritas por afirmarem mais do que os dados mostravam.',
+  },
 ];

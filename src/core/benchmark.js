@@ -67,7 +67,8 @@ export function benchBusca(cenarios, { repeticoes = 5 } = {}) {
 }
 
 export function descreverAmbiente() {
-  if (typeof navigator !== 'undefined' && navigator.userAgent) {
+  // O Node moderno também define `navigator`; por isso a checagem de `window` vem primeiro.
+  if (typeof window !== 'undefined' && typeof navigator !== 'undefined' && navigator.userAgent) {
     return `Navegador: ${navigator.userAgent}`;
   }
   if (typeof process !== 'undefined' && process.versions) {
