@@ -8,7 +8,8 @@
     "start": "node scripts/serve.js",
     "test": "node --test",
     "bench": "node scripts/bench.js",
-    "relatorio": "node scripts/gerar-relatorio.js"
+    "relatorio": "node scripts/gerar-relatorio.js",
+    "gabarito": "node scripts/gerar-gabarito-grafos.js"
   },
   "engines": {
     "node": ">=20"
