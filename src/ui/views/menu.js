@@ -15,7 +15,7 @@ export function render(ctx) {
       <a class="card-menu primario" href="#/jogar"><span class="ico">🎮</span><b>Jogar</b><small>Modo manual: 5 fases com feedback, desfazer e reinício.</small></a>
       <a class="card-menu" href="#/resolver"><span class="ico">🤖</span><b>Resolver</b><small>Solver automático: BFS, DFS e DFS recursiva, com métricas e árvore de busca.</small></a>
       <a class="card-menu" href="#/instrucoes"><span class="ico">📖</span><b>Instruções</b><small>Como jogar, regras de cada fase e modo de avaliação.</small></a>
-      <a class="card-menu" href="#/resultados"><span class="ico">📊</span><b>Resultados</b><small>Selos, comparação dos algoritmos, AVL e registro de uso de IAG.</small></a>
+      <a class="card-menu" href="#/resultados"><span class="ico">📊</span><b>Resultados</b><small>Selos, comparação dos algoritmos, AVL e declaração de uso de IA.</small></a>
       <a class="card-menu" href="#/sair"><span class="ico">🚪</span><b>Sair</b><small>Encerrar a sessão.</small></a>
     </nav>
     <section class="painel">

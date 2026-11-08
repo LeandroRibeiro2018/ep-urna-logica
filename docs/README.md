@@ -2,11 +2,11 @@
 
 | Arquivo | Para quê |
 |---|---|
-| [`relatorio-tecnico.pdf`](relatorio-tecnico.pdf) | **Relatório técnico** (seção 16.1 do enunciado): narrativa e regras, modelagem, arquitetura, estruturas, algoritmos, testes, métricas, complexidade, IAG e conclusão. |
+| [`relatorio-tecnico.pdf`](relatorio-tecnico.pdf) | **Relatório técnico** (seção 16.1 do enunciado): narrativa e regras, modelagem, arquitetura, estruturas, algoritmos, testes, métricas, complexidade, uso de IA e conclusão. |
 | [`relatorio-tecnico.html`](relatorio-tecnico.html) | Fonte do PDF (gerado por `npm run relatorio`; imprimir como PDF para atualizar). |
 | [`guia-da-professora.md`](guia-da-professora.md) | Como abrir e jogar em poucos minutos, com gabarito. |
 | [`roteiro-demonstracao.md`](roteiro-demonstracao.md) | Roteiro de ≈ 12 min da demonstração em sala (partida manual + solver). |
-| [`uso-de-iag.md`](uso-de-iag.md) | Registro de uso de IAG (seção 14.4) e curadoria. |
+| [`uso-de-iag.md`](uso-de-iag.md) | Declaração de uso do Claude no desenvolvimento. |
 | [`checklist-entrega.md`](checklist-entrega.md) | Checklist da seção 19, RF01–RF12, rastreabilidade (seção 10) e pendências dos autores. |
 | [`prints/`](prints) | Capturas de tela usadas no relatório. |
 

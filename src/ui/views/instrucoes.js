@@ -13,7 +13,7 @@ export function render(ctx) {
         <li><b>Jogar</b>: escolha uma fase na barra de abas. Leia o objetivo e as regras, faça jogadas e observe o <i>feedback</i> colorido (verde = ok, amarelo = aviso, vermelho = jogada recusada).</li>
         <li>Jogada inválida <b>nunca</b> apaga ou corrompe dados. Você pode <b>desfazer</b> (fases 2 e 3) e <b>reiniciar só a fase atual</b> sem perder os outros selos.</li>
         <li><b>Resolver</b>: o solver encontra soluções explorando estados e mostra métricas, ordem de visita e árvore de busca.</li>
-        <li><b>Resultados</b>: comparações de desempenho, demonstração da AVL e registro de uso de IAG.</li>
+        <li><b>Resultados</b>: comparações de desempenho, demonstração da AVL e declaração de uso de IA.</li>
       </ol>
     </section>
     <section class="painel">

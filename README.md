@@ -88,10 +88,10 @@ src/core/                  # regras e algoritmos, SEM DOM (testável no Node)
   fases/fase1..fase5.js    # regras de cada fase
   jogo.js · gerador.js · benchmark.js
 src/ui/                    # interface (views, SVG do mapa e da AVL)
-src/dados/                 # mapas, textos, registro de uso de IAG
+src/dados/                 # mapas, textos, declaração de uso de IA
 tests/                     # testes por módulo + integração
 scripts/                   # servidor local, benchmark, gerador do relatório
-docs/                      # relatório técnico (PDF), guia, roteiro, IAG, checklist, prints
+docs/                      # relatório técnico (PDF), guia, roteiro, checklist, prints
 ```
 
 ## 6. Decisões principais
@@ -108,6 +108,6 @@ docs/                      # relatório técnico (PDF), guia, roteiro, IAG, chec
 
 *Settings → Pages → Deploy from a branch → `main` / `(root)`.* O arquivo `.nojekyll` já está na raiz. O servidor do Pages distingue maiúsculas de minúsculas nos nomes de arquivo (os caminhos de importação foram verificados).
 
-## 8. Uso de IAG
+## 8. Uso de IA
 
-Registrado em [`docs/uso-de-iag.md`](docs/uso-de-iag.md), em `src/dados/iag.js` e na tela **Resultados**. As colunas marcadas `[preencher]` devem ser completadas pelos autores com a validação humana antes da entrega.
+Este projeto foi desenvolvido com o auxílio do **Claude** (Anthropic), um assistente de inteligência artificial, na construção do código, dos testes, da interface e da documentação. Detalhes em [`docs/uso-de-iag.md`](docs/uso-de-iag.md).

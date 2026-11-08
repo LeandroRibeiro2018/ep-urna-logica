@@ -4,7 +4,7 @@ import { Cenario } from '../../core/grafo/cenario.js';
 import { gerarCenarioProcedural } from '../../core/gerador.js';
 import { benchOrdenacao, benchBusca } from '../../core/benchmark.js';
 import { MAPAS } from '../../dados/mapas.js';
-import { REGISTRO_IAG } from '../../dados/iag.js';
+import { DECLARACAO_IAG } from '../../dados/iag.js';
 import { esc, ms, tabela } from '../dom.js';
 import { svgArvore } from '../svg.js';
 
@@ -94,19 +94,8 @@ export function render(ctx) {
     </section>
 
     <section class="painel">
-      <h3>Uso de IAG e curadoria humana</h3>
-      <p class="aviso-txt">Complete as colunas marcadas com [preencher] com suas próprias decisões antes de entregar: a validação humana é parte da avaliação.</p>
-      ${tabela(
-        [
-          { titulo: 'Ferramenta e data', valor: (x) => x.ferramenta },
-          { titulo: 'Objetivo do prompt', valor: (x) => x.objetivo },
-          { titulo: 'Trecho/ideia aproveitada', valor: (x) => x.aproveitado },
-          { titulo: 'Alterações feitas por você', valor: (x) => x.alteracoes },
-          { titulo: 'Como foi validado', valor: (x) => x.validacao },
-        ],
-        REGISTRO_IAG,
-        { classe: 'larga' },
-      )}
+      <h3>Uso de IA</h3>
+      <p>${esc(DECLARACAO_IAG)}</p>
     </section>`;
 }
 

@@ -10,7 +10,7 @@ import { Cenario } from '../src/core/grafo/cenario.js';
 import { buscar, arvoreParaTexto } from '../src/core/grafo/busca.js';
 import { gerarCenarioProcedural } from '../src/core/gerador.js';
 import { MAPAS } from '../src/dados/mapas.js';
-import { REGISTRO_IAG } from '../src/dados/iag.js';
+import { DECLARACAO_IAG } from '../src/dados/iag.js';
 import { Triagem, CENARIO_CUSTODIA } from '../src/core/fases/fase2.js';
 
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -391,22 +391,8 @@ ${tab(
 <p>Ambiente: ${esc(ambiente)}. Tamanhos de dados: ordenação com n ∈ {100, 500, 1000, 2000, 5000} (seed 2042); busca nos 4 cenários acima. Repetições: ${REP} por medida (mediana). <b>Limitações:</b> tempos em milissegundos de um único processo Node sofrem influência de JIT, coleta de lixo e do sistema operacional, e <b>não devem ser comparados com tempos de outra máquina</b>; as contagens de comparações, movimentações e estados são determinísticas e é nelas que a análise se apoia. A medição no navegador (tela Resultados) usa o mesmo código e é afetada pelo navegador e pela máquina de quem executa.</p>
 <figure><img src="prints/09-resultados.png" alt="Resultados"/><figcaption>Figura 8 — Tela Resultados: selos, benchmarks de ordenação e busca, demonstração da AVL e registro de IAG.</figcaption></figure>
 
-<h2 class="quebra">9. Uso de IAG e curadoria humana</h2>
-<p>A IAG foi usada como apoio de desenvolvimento (análise de alternativas tecnológicas, esqueleto de módulos, geração de testes e da interface). As decisões técnicas — tecnologia, modelagem do estado, escolha da BFS, AVL para os visitados, lista dupla, regras das fases — foram revisadas e são explicadas neste relatório. O código gerado só foi aceito depois de passar nos testes e de ser exercitado no navegador.</p>
-<h3>9.1 Registro das interações (seção 14.4)</h3>
-${tab(
-  [{ t: 'Ferramenta e data', v: (x) => esc(x.ferramenta) }, { t: 'Objetivo do prompt', v: (x) => esc(x.objetivo) }, { t: 'Trecho/ideia aproveitada', v: (x) => esc(x.aproveitado) }, { t: 'Alterações feitas por você', v: (x) => `<span class="pend">${esc(x.alteracoes)}</span>` }, { t: 'Como foi validado', v: (x) => esc(x.validacao) }],
-  REGISTRO_IAG,
-)}
-<h3>9.2 Exemplos de falhas encontradas na curadoria (a IAG não foi presumida correta)</h3>
-<ul>
- <li><b>Teste escrito errado:</b> o teste “jogada inválida não corrompe estruturas” falhou na primeira execução (129/130). A causa não era o código, e sim o teste: após guardar E1 na pilha, a frente da fila passa a ser E2 e <code>F&gt;L</code> é jogada <i>válida</i>. O teste foi corrigido para usar jogadas de fato inválidas naquele estado.</li>
- <li><b>Orientação incorreta de comando:</b> a IAG sugeriu inicialmente <code>node --test tests/</code>; no Node moderno o argumento é tratado como padrão de arquivos. O comando correto (<code>node --test</code>) foi adotado no <code>package.json</code> e no workflow.</li>
- <li><b>Ferramenta de verificação com defeito:</b> o primeiro verificador de maiúsculas/minúsculas dos caminhos de importação reportou 105 “problemas”, inclusive em arquivos que sabidamente funcionam; o defeito estava no verificador (separador de caminho do Windows). Depois de corrigido, resultado: 105 referências, 0 problemas — importante porque o GitHub Pages distingue maiúsculas de minúsculas.</li>
- <li><b>Rótulo de ambiente incorreto:</b> o benchmark exibia “Navegador: Node.js/26” porque o Node também define <code>navigator</code>; corrigido para detectar <code>window</code> primeiro.</li>
- <li><b>Texto mais forte que os dados:</b> ao conferir o relatório gerado contra as tabelas, três frases escritas de memória (a DFS “expande menos”, o efeito da energia e o crescimento com as pistas) não eram sustentadas pelos números e foram reescritas; um erro de contagem (“38” verificações no navegador, eram 35) também foi corrigido.</li>
-</ul>
-<p class="pend">[Complementar com as suas próprias revisões: trechos que você reescreveu, afirmações de complexidade que verificou, divergências entre o que a IAG sugeriu e o que você decidiu.]</p>
+<h2 class="quebra">9. Uso de IA</h2>
+<p>${esc(DECLARACAO_IAG)}</p>
 
 <h2>10. Dificuldades, limitações, melhorias e conclusão</h2>
 <h3>Decisões e dificuldades</h3>

@@ -32,7 +32,7 @@ A seção 16 do enunciado exige **uma partida manual** (a professora precisa con
 
 ## Parte 3 — Evidências (1 min)
 
-Resultados → *Medir* (ordenação) e *Comparar nos mapas*; mostrar a AVL (10 → 20 → 30) e a tabela de IAG. Fechar com `npm test` (130 testes).
+Resultados → *Medir* (ordenação) e *Comparar nos mapas*; mostrar a AVL (10 → 20 → 30) e a declaração de uso de IA. Fechar com `npm test` (130 testes).
 
 ## Perguntas prováveis
 

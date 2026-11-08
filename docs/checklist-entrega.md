@@ -22,7 +22,7 @@ Legenda: ✅ atendido e verificado · 🟡 depende de ação dos autores (não p
 | Estados distinguem posição, pistas, portas e energia | ✅ | `Estado` em `cenario.js`; testes “Estados: posição igual não significa estado igual”. |
 | Testes com casos-limite e integração | ✅ | 130 testes, 19 suítes (`npm test`); relatório §7. |
 | Relatório com métricas e complexidade | ✅ | `relatorio-tecnico.pdf` §6–§8 (gerado por `scripts/gerar-relatorio.js`). |
-| Uso de IAG documentado **e validado por você** | 🟡 | `uso-de-iag.md` — preencher colunas `[preencher]`. |
+| Uso de IA informado | ✅ | `uso-de-iag.md`; relatório §9; tela **Resultados**. |
 | A professora consegue executar e jogar | ✅ / 🟡 | Link do Pages + `guia-da-professora.md`. 🟡 Falta o teste com pessoa externa. |
 
 ## 2. Requisitos funcionais (seção 11)
@@ -40,7 +40,7 @@ Legenda: ✅ atendido e verificado · 🟡 depende de ação dos autores (não p
 | RF09 | AVL para indexar estados | `AVL.js`; Fase 4 |
 | RF10 | Métricas do solver: tempo, estados, caminho, custo | **Resolver** e **Resultados**; `benchmark.js` |
 | RF11 | Ações manuais com feedback | Fases 1–5 |
-| RF12 | Registro/log do uso de IAG | `src/dados/iag.js`; `uso-de-iag.md`; relatório §9 |
+| RF12 | Registro do uso de IA | `src/dados/iag.js`; `uso-de-iag.md`; relatório §9 |
 
 ## 3. Rastreabilidade dos conteúdos (seção 10)
 
@@ -73,13 +73,12 @@ Detalhamento em `relatorio-tecnico.pdf` §7. Todos os módulos listados no enunc
 | Jogo executável / instruções | ✅ | link do Pages; `guia-da-professora.md` |
 | Solver funcional com demonstração | ✅ | tela **Resolver** |
 | Relatório técnico em PDF | ✅ 🟡 | `relatorio-tecnico.pdf` — preencher nomes, URL e as marcações amarelas |
-| Relatório de uso de IAG | 🟡 | `uso-de-iag.md` |
+| Declaração de uso de IA | ✅ | `uso-de-iag.md` |
 | Demonstração em sala (manual + solver) | 🟡 | roteiro em `roteiro-demonstracao.md` |
 
 ## 6. Antes de entregar (ações dos autores)
 
 - [ ] Preencher nomes da equipe, da professora e a URL do GitHub Pages (relatório e `README.md`; depois `npm run relatorio` e reimprimir o PDF).
-- [ ] Completar as colunas `[preencher]` do registro de IAG (`src/dados/iag.js` e `uso-de-iag.md`).
 - [ ] **Teste de usabilidade com alguém que não programou o jogo**, sem explicação oral, e registrar no relatório (§7 e §10).
 - [ ] Conferir o link publicado: jogar a Fase 1 e abrir **Resolver** no endereço do Pages.
 - [ ] Ensaiar a demonstração com `roteiro-demonstracao.md`.
