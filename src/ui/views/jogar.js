@@ -60,10 +60,10 @@ function fase1(ctx) {
       <h3>Controles</h3>
       <div class="linha">
         <label>Critério de ordenação
-          <select data-campo="f1crit">${opcoes(Object.values(CRITERIOS).map((c) => ({ valor: c.id, rotulo: c.nome })), campo(ctx, 'f1crit'), '— escolha o critério —')}</select>
+          <select data-campo="f1crit" data-onchange="f1Mudou">${opcoes(Object.values(CRITERIOS).map((c) => ({ valor: c.id, rotulo: c.nome })), campo(ctx, 'f1crit'), '— escolha o critério —')}</select>
         </label>
         <label>Algoritmo
-          <select data-campo="f1alg">${opcoes(Object.values(ALGORITMOS).map((a) => ({ valor: a.id, rotulo: `${a.nome} — ${a.complexidade}` })), campo(ctx, 'f1alg'), '— escolha o algoritmo —')}</select>
+          <select data-campo="f1alg" data-onchange="f1Mudou">${opcoes(Object.values(ALGORITMOS).map((a) => ({ valor: a.id, rotulo: `${a.nome} — ${a.complexidade}` })), campo(ctx, 'f1alg'), '— escolha o algoritmo —')}</select>
         </label>
         <button class="btn" data-acao="f1Executar">▶ Executar ordenação</button>
       </div>
@@ -74,6 +74,7 @@ function fase1(ctx) {
       u
         ? `<section class="painel">
             <h3>Resultado da última execução</h3>
+            ${campo(ctx, 'f1alg') !== u.algoritmo || campo(ctx, 'f1crit') !== u.criterio ? '<p class="aviso-txt">⚠ A seleção acima mudou depois desta execução: este resultado é do algoritmo e do critério listados abaixo. Clique em “Executar ordenação” para aplicar a nova seleção.</p>' : ''}
             <div class="metricas">
               <div><span>Algoritmo</span><b>${esc(ALGORITMOS[u.algoritmo].nome)}</b></div>
               <div><span>Critério</span><b>${esc(CRITERIOS[u.criterio].nome)}</b></div>
@@ -389,6 +390,10 @@ export const acoes = {
   },
 
   // Fase 1
+  f1Mudou(el, ctx) {
+    ctx.ui.fb[1] = { tipo: 'aviso', texto: 'Seleção alterada. Clique em “Executar ordenação” para aplicá-la.' };
+    ctx.rerender();
+  },
   f1Executar(el, ctx) {
     const r = ctx.jogo.fase1.executar(campo(ctx, 'f1alg'), campo(ctx, 'f1crit'));
     ok(ctx, 1, !r.ok ? 'erro' : r.sucesso ? 'sucesso' : 'erro', r.msg);
