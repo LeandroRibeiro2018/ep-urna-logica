@@ -4,7 +4,7 @@ Exercício Programa de **Estruturas de Dados e Análise de Algoritmos** (IPT · 
 Jogo de lógica e investigação em **HTML + CSS + JavaScript puro** (módulos ES), **sem build e sem dependências**.
 Verídia, seus locais, registros, códigos e opções são **inteiramente fictícios**: não há nomes, partidos, números ou resultados de eleições reais.
 
-- **Jogo online:** `[URL do GitHub Pages — preencher após publicar]`
+- **Jogo online:** <https://leandroribeiro2018.github.io/ep-urna-logica/>
 - **Relatório técnico (PDF):** [`docs/relatorio-tecnico.pdf`](docs/relatorio-tecnico.pdf)
 - **Todos os documentos de entrega:** [`docs/`](docs/README.md)
 

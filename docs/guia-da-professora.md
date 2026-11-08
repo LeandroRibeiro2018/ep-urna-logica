@@ -6,7 +6,7 @@ Tempo estimado para jogar uma fase: **2 a 3 minutos**. Não é preciso instalar 
 
 | Opção | Passos |
 |---|---|
-| **A. Online (mais simples)** | Abrir `[URL do GitHub Pages — preencher após publicar]` em qualquer navegador moderno (Chrome, Edge, Firefox). |
+| **A. Online (mais simples)** | Abrir <https://leandroribeiro2018.github.io/ep-urna-logica/> em qualquer navegador moderno (Chrome, Edge, Firefox). |
 | **B. Local com npm** | Instalar o [Node.js](https://nodejs.org) 20 ou superior. Na pasta do projeto: `npm start` e abrir <http://localhost:8080/>. |
 | **C. Local sem npm** | Na pasta do projeto: `node scripts/serve.js` e abrir <http://localhost:8080/>. |
 

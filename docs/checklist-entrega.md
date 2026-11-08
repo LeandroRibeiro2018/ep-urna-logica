@@ -78,7 +78,7 @@ Detalhamento em `relatorio-tecnico.pdf` §7. Todos os módulos listados no enunc
 
 ## 6. Antes de entregar (ações dos autores)
 
-- [ ] Preencher nomes da equipe, da professora e a URL do GitHub Pages (relatório e `README.md`; depois `npm run relatorio` e reimprimir o PDF).
+- [ ] Preencher nomes da equipe, da professora e a URL do GitHub Pages (já preenchida; relatório e `README.md`; depois `npm run relatorio` e reimprimir o PDF).
 - [ ] **Teste de usabilidade com alguém que não programou o jogo**, sem explicação oral, e registrar no relatório (§7 e §10).
 - [ ] Conferir o link publicado: jogar a Fase 1 e abrir **Resolver** no endereço do Pages.
 - [ ] Ensaiar a demonstração com `roteiro-demonstracao.md`.

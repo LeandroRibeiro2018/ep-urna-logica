@@ -164,7 +164,7 @@ const html = `<!doctype html>
   <h1>Urna Lógica — O Enigma da Eleição de Verídia</h1>
   <p>Relatório técnico do Exercício Programa · gerado em ${hoje}</p>
   <p>Autoria: <span class="pend">[nomes da equipe]</span> · Professora: <span class="pend">[nome]</span></p>
-  <p>Repositório / jogo online: <span class="pend">[URL do GitHub Pages]</span></p>
+  <p>Repositório / jogo online: <a href="https://leandroribeiro2018.github.io/ep-urna-logica/">https://leandroribeiro2018.github.io/ep-urna-logica/</a> · código: <a href="https://github.com/LeandroRibeiro2018/ep-urna-logica">https://github.com/LeandroRibeiro2018/ep-urna-logica</a></p>
 </div>
 
 <h2>1. Resumo do jogo e objetivo</h2>
