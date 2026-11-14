@@ -2,6 +2,7 @@ import { Jogo, FASES } from '../core/jogo.js';
 import * as menu from './views/menu.js';
 import * as jogar from './views/jogar.js';
 import * as resolver from './views/resolver.js';
+import * as automatico from './views/automatico.js';
 import * as instrucoes from './views/instrucoes.js';
 import * as resultados from './views/resultados.js';
 import { esc } from './dom.js';
@@ -16,11 +17,11 @@ const sair = {
   acoes: {},
 };
 
-const views = { menu, jogar, resolver, instrucoes, resultados, sair };
+const views = { menu, jogar, resolver, automatico, instrucoes, resultados, sair };
 const todasAcoes = Object.assign({}, ...Object.values(views).map((v) => v.acoes || {}));
 
 const jogo = new Jogo({ seed: 2042 });
-const ui = { fase: 1, fb: {}, form: {}, resolver: null, bench: null, f4Ultima: null };
+const ui = { fase: 1, fb: {}, form: {}, resolver: null, bench: null, f4Ultima: null, auto: null };
 const app = document.getElementById('app');
 
 function toast(msg) {

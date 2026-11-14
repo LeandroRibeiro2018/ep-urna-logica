@@ -59,5 +59,5 @@ Menu → **Resolver**. Escolha o problema (mapa, custódia ou mapa procedural), 
 
 - Relatório técnico: [`relatorio-tecnico.pdf`](relatorio-tecnico.pdf)
 - Uso de IA: [`uso-de-iag.md`](uso-de-iag.md) (e a tela **Resultados**)
-- Testes: `npm test` (130 testes) · medições: `npm run bench` ou a tela **Resultados**
+- Testes: `npm test` (143 testes) · medições: `npm run bench` ou a tela **Resultados**
 - Checklist da entrega: [`checklist-entrega.md`](checklist-entrega.md)

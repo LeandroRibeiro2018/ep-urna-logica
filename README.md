@@ -28,7 +28,7 @@ Verídia, seus locais, registros, códigos e opções são **inteiramente fictí
 
 ### Menu (RF01)
 
-**Jogar** (modo manual) · **Resolver** (solver automático) · **Instruções** · **Resultados** · **Sair**.
+**Jogar** (modo manual) · **Resolver** (solver automático) · **Execução automática** · **Instruções** · **Resultados** · **Sair**.
 No menu também fica a **seed**: a mesma seed gera sempre os mesmos registros fictícios e o mesmo embaralhamento (RF03).
 
 ### Modo manual — as cinco fases (RF02, RF11)
@@ -48,6 +48,10 @@ Cada fase tem **objetivo verificável**, **regras claras**, **condição de suce
 ### Modo solver (Resolver)
 
 Escolha o **problema** (mapa, custódia ou mapa procedural por seed) e a **estratégia** (**BFS**, **DFS** ou **DFS recursiva**). A tela mostra o caminho, o custo/energia, **estados explorados**, repetidos evitados (AVL), tamanho máximo da fila/pilha, altura da AVL, tempo, a **ordem de visita** e a **árvore de busca**. *Comparar BFS × DFS* põe as três estratégias lado a lado (RF07, RF10). O solver aplica **as mesmas regras do modo manual** — não existe resposta fixa.
+
+### Execução automática (as 5 fases, passo a passo)
+
+O menu **Execução automática** joga as cinco fases sozinho, numa partida própria (o progresso manual não é alterado), com **Próximo passo / Anterior / Reproduzir / Mostrar tudo**. Cada ponto em que o jogador teria mais de uma jogada vira um **🔀 ponto de decisão**: a tela lista as alternativas, o que cada uma causaria (calculado com as regras reais: jogada recusada com o motivo, ou quantas jogadas ainda faltariam) e por que uma foi escolhida. Há 22 pontos de decisão na seed 2042 (critério e algoritmo da Fase 1, cada jogada da custódia, cada movimento do mapa, as classificações e a ordem de inserção na AVL, e as escolhas de lote, custódia e trilha na Fase 5). O filtro *Mostrar só os pontos de decisão* resume a partida. Código: `src/core/automatico.js` (testes em `tests/automatico.test.js`).
 
 ### Para a professora avaliadora
 
@@ -69,7 +73,7 @@ Para jogar **uma fase**: abra o jogo → **Jogar** → Fase 1 (≈ 2 min). Para 
 ## 4. Testes e métricas
 
 ```bash
-npm test             # node --test: 130 testes, 19 suítes, sem dependências
+npm test             # node --test: 143 testes, 20 suítes, sem dependências
 npm run bench        # compara ordenações e buscas no terminal
 npm run relatorio    # regera docs/relatorio-tecnico.html com métricas recalculadas
 ```

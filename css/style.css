@@ -207,3 +207,32 @@ ol.visita { max-height: 260px; overflow: auto; font-size: .85rem; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 @media print { .topo, .toast, .btn { display: none; } }
+
+/* ---- Execução automática ---- */
+.controles-auto { margin-bottom: .6rem; }
+.progresso { height: 8px; background: var(--borda); border-radius: 99px; overflow: hidden; margin: .6rem 0 0; }
+.progresso i { display: block; height: 100%; background: var(--acento); transition: width .25s; }
+.btn.mini { padding: .1rem .55rem; font-size: .85rem; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.fase-bloco { margin: 0 0 1.2rem; }
+.fase-bloco > h3 { margin: 0 0 .5rem; }
+.passo { background: var(--painel); border: 1px solid var(--borda); border-left: 5px solid var(--borda); border-radius: var(--raio); padding: .7rem 1rem; margin: 0 0 .6rem; }
+.passo.ok { border-left-color: var(--ok); }
+.passo.sucesso { border-left-color: var(--ok); background: var(--sucesso-bg); }
+.passo.aviso { border-left-color: var(--aviso); }
+.passo.erro { border-left-color: var(--erro); }
+.passo header { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.passo .num { font-family: var(--mono); font-size: .8rem; color: var(--suave); }
+.passo .detalhe { margin: .35rem 0 0; }
+.etiqueta { font-size: .75rem; font-weight: 600; padding: 1px 8px; border-radius: 99px; background: var(--aviso-bg); color: var(--aviso); border: 1px solid currentColor; }
+.etiqueta.erro { background: var(--erro-bg); color: var(--erro); }
+.passo.com-decisao { border-left-color: var(--acento); }
+.passo.com-decisao .etiqueta:not(.erro) { background: color-mix(in srgb, var(--acento) 14%, transparent); color: var(--acento); }
+.decisao { margin-top: .6rem; padding: .6rem .8rem; border: 1px dashed var(--acento); border-radius: 10px; background: color-mix(in srgb, var(--acento) 6%, transparent); }
+.decisao h4 { margin: 0 0 .2rem; color: var(--acento); }
+.decisao .pergunta { margin: 0 0 .3rem; }
+.decisao .porque { margin: .3rem 0 0; }
+.tab-decisao tr.destaque td { background: var(--ok-bg); font-weight: 600; }
+.arvore-txt { font-family: var(--mono); font-size: .82rem; background: color-mix(in srgb, var(--borda) 45%, transparent); padding: .5rem .7rem; border-radius: 8px; overflow: auto; margin: .5rem 0 0; }
+.final-auto.ok { border-color: var(--ok); background: var(--sucesso-bg); }
+.final-auto.erro { border-color: var(--erro); background: var(--erro-bg); }

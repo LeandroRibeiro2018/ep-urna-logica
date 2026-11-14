@@ -20,7 +20,7 @@ Legenda: ✅ atendido e verificado · 🟡 depende de ação dos autores (não p
 | Árvore de busca apresentada | ✅ | `arvoreParaTexto()`; tela **Resolver**; relatório §6.3. |
 | AVL implementada e utilizada para estados | ✅ | `AVL.js`; visitados do solver e da Fase 3; Fase 4; relatório §5.1. |
 | Estados distinguem posição, pistas, portas e energia | ✅ | `Estado` em `cenario.js`; testes “Estados: posição igual não significa estado igual”. |
-| Testes com casos-limite e integração | ✅ | 130 testes, 19 suítes (`npm test`); relatório §7. |
+| Testes com casos-limite e integração | ✅ | 143 testes, 20 suítes (`npm test`); relatório §7. |
 | Relatório com métricas e complexidade | ✅ | `relatorio-tecnico.pdf` §6–§8 (gerado por `scripts/gerar-relatorio.js`). |
 | Uso de IA informado | ✅ | `uso-de-iag.md`; relatório §9; tela **Resultados**. |
 | A professora consegue executar e jogar | ✅ / 🟡 | Link do Pages + `guia-da-professora.md`. 🟡 Falta o teste com pessoa externa. |

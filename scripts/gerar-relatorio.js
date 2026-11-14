@@ -170,7 +170,7 @@ const html = `<!doctype html>
 <h2>1. Resumo do jogo e objetivo</h2>
 <p><b>Urna Lógica</b> é um jogo de lógica e investigação em HTML, CSS e JavaScript puro (módulos ES, sem build e sem dependências). O jogador é um(a) Analista de Integridade de Dados da Comissão Independente de Verificação (CIV) de Verídia, cidade <b>inteiramente fictícia</b>. Uma falha de sincronização embaralhou os registros da apuração, interrompeu conexões entre locais e espalhou evidências. A pergunta do auditor é: <i>é possível reconstruir uma trilha coerente entre os registros de origem, os locais de votação e o relatório final, respeitando todas as regras do cenário?</i></p>
 <p>O jogo tem <b>cinco fases</b> (um selo cada) e um <b>modo solver</b> que explora o espaço de estados com BFS, DFS iterativa e DFS recursiva usando exatamente as mesmas regras do modo manual. O objetivo não favorece nenhuma opção: todos os dados (locais, códigos, listas “Aurora”, “Cedro”, “Maré”, “Prisma”) são inventados.</p>
-<p>Para jogar: <code>npm start</code> e abrir <code>http://localhost:8080/</code> (ou o link do GitHub Pages). Para testar: <code>npm test</code> (${'130'} testes).</p>
+<p>Para jogar: <code>npm start</code> e abrir <code>http://localhost:8080/</code> (ou o link do GitHub Pages). Para testar: <code>npm test</code> (${'143'} testes).</p>
 <figure><img src="prints/01-menu.png" alt="Menu inicial"/><figcaption>Figura 1 — Menu inicial (RF01): Jogar, Resolver, Instruções, Resultados e Sair.</figcaption></figure>
 
 <h2>2. História, fases, regras e condições de vitória</h2>
@@ -249,7 +249,7 @@ src/core/            regras e algoritmos — SEM DOM; roda no Node (testes) e no
   jogo.js · gerador.js · benchmark.js
 src/ui/              app.js (roteador) · views/ (menu, jogar, resolver, instrucoes, resultados) · svg.js · dom.js
 src/dados/           mapas.js · textos.js · iag.js          ← dados separados do código
-tests/               5 arquivos, 19 suítes, 130 testes
+tests/               6 arquivos, 20 suítes, 143 testes
 scripts/             serve.js (servidor local) · bench.js · gerar-relatorio.js</pre>
 <p><b>Separação de responsabilidades (RNF):</b> regras do jogo (<code>fases/</code>, <code>cenario.js</code>), estruturas de dados (<code>estruturas/</code>), algoritmos (<code>ordenacao/</code>, <code>busca.js</code>), interface (<code>ui/</code>) e dados de entrada (<code>dados/</code>) ficam em módulos independentes. <code>core/</code> não referencia o DOM, por isso é testável no Node. <b>O solver reutiliza as regras do modo manual</b>: <code>Cenario.sucessores</code> chama <code>tentarMover</code> (a mesma função do clique do jogador) e <code>Triagem.problema</code> chama <code>Triagem.executar</code>. Não existe solução paralela nem sequência fixa escondida no código.</p>
 
@@ -339,7 +339,7 @@ ${tab(
 <figure><img src="prints/07-fase5-relatorio.png" alt="Fase 5"/><figcaption>Figura 7 — Fase 5: relatório de consistência com as 6 regras, apuração, evidências ordenadas e comparação.</figcaption></figure>
 
 <h2 class="quebra">7. Estratégia e resultados dos testes</h2>
-<p>Os testes usam o executor nativo do Node (<code>node --test</code>), sem dependências, e rodam a cada push no GitHub Actions. Todos são determinísticos (seeds fixas). <b>Resultado: 130 testes, 19 suítes, 130 aprovados, 0 falhas.</b></p>
+<p>Os testes usam o executor nativo do Node (<code>node --test</code>), sem dependências, e rodam a cada push no GitHub Actions. Todos são determinísticos (seeds fixas). <b>Resultado: 143 testes, 20 suítes, 143 aprovados, 0 falhas.</b></p>
 ${tab(
   [{ t: 'Módulo (seção 15)', v: (x) => x[0] }, { t: 'Casos exigidos', v: (x) => x[1] }, { t: 'Onde', v: (x) => `<code>${x[2]}</code>` }],
   [

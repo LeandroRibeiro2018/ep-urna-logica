@@ -14,6 +14,7 @@ export function render(ctx) {
     <nav class="menu-grid" aria-label="Menu principal">
       <a class="card-menu primario" href="#/jogar"><span class="ico">🎮</span><b>Jogar</b><small>Modo manual: 5 fases com feedback, desfazer e reinício.</small></a>
       <a class="card-menu" href="#/resolver"><span class="ico">🤖</span><b>Resolver</b><small>Solver automático: BFS, DFS e DFS recursiva, com métricas e árvore de busca.</small></a>
+      <a class="card-menu" href="#/automatico"><span class="ico">⏯</span><b>Execução automática</b><small>As 5 fases jogadas passo a passo, com os pontos de decisão explicados.</small></a>
       <a class="card-menu" href="#/instrucoes"><span class="ico">📖</span><b>Instruções</b><small>Como jogar, regras de cada fase e modo de avaliação.</small></a>
       <a class="card-menu" href="#/resultados"><span class="ico">📊</span><b>Resultados</b><small>Selos, comparação dos algoritmos, AVL e declaração de uso de IA.</small></a>
       <a class="card-menu" href="#/sair"><span class="ico">🚪</span><b>Sair</b><small>Encerrar a sessão.</small></a>
@@ -37,6 +38,7 @@ export const acoes = {
     ctx.jogo.reiniciarTudo(Number.isFinite(seed) ? Math.abs(Math.trunc(seed)) : 2042);
     ctx.ui.fb = {};
     ctx.ui.f4Ultima = null;
+    ctx.ui.auto = null;
     ctx.toast('Nova partida iniciada.');
     ctx.rerender();
   },

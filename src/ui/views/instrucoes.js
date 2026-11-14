@@ -12,6 +12,7 @@ export function render(ctx) {
       <ol>
         <li><b>Jogar</b>: escolha uma fase na barra de abas. Leia o objetivo e as regras, faça jogadas e observe o <i>feedback</i> colorido (verde = ok, amarelo = aviso, vermelho = jogada recusada).</li>
         <li>Jogada inválida <b>nunca</b> apaga ou corrompe dados. Você pode <b>desfazer</b> (fases 2 e 3) e <b>reiniciar só a fase atual</b> sem perder os outros selos.</li>
+        <li><b>Execução automática</b>: joga as cinco fases sozinha, passo a passo, e destaca cada <i>ponto de decisão</i> (alternativas, consequência de cada uma e motivo da escolha). Não altera a sua partida.</li>
         <li><b>Resolver</b>: o solver encontra soluções explorando estados e mostra métricas, ordem de visita e árvore de busca.</li>
         <li><b>Resultados</b>: comparações de desempenho, demonstração da AVL e declaração de uso de IA.</li>
       </ol>

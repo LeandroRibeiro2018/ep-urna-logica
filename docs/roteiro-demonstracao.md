@@ -7,7 +7,7 @@ A seção 16 do enunciado exige **uma partida manual** (a professora precisa con
 - [ ] Abrir o jogo online **e** ter `npm start` pronto como plano B (sem internet na sala).
 - [ ] Menu → seed `2042` → *Nova partida* (dados reproduzíveis).
 - [ ] Zoom do navegador em 110–125% para o projetor; modo claro.
-- [ ] `npm test` já executado uma vez (mostrar 130 aprovados).
+- [ ] `npm test` já executado uma vez (mostrar 143 aprovados).
 - [ ] Combinar quem fala de cada fase.
 
 ## Parte 1 — Partida manual (7 min)
@@ -32,7 +32,7 @@ A seção 16 do enunciado exige **uma partida manual** (a professora precisa con
 
 ## Parte 3 — Evidências (1 min)
 
-Resultados → *Medir* (ordenação) e *Comparar nos mapas*; mostrar a AVL (10 → 20 → 30) e a declaração de uso de IA. Fechar com `npm test` (130 testes).
+Resultados → *Medir* (ordenação) e *Comparar nos mapas*; mostrar a AVL (10 → 20 → 30) e a declaração de uso de IA. Fechar com `npm test` (143 testes).
 
 ## Perguntas prováveis
 
